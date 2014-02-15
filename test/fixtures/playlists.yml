@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  url: MyString
+  videos_count: 1
+  download_status: false
+  last_refreshed_at: 2014-02-16 02:36:11
+
+two:
+  name: MyString
+  url: MyString
+  videos_count: 1
+  download_status: false
+  last_refreshed_at: 2014-02-16 02:36:11

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @playlist.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @playlist.url %>
+</p>
+
+<p>
+  <strong>Videos count:</strong>
+  <%= @playlist.videos_count %>
+</p>
+
+<p>
+  <strong>Download status:</strong>
+  <%= @playlist.download_status %>
+</p>
+
+<p>
+  <strong>Last refreshed at:</strong>
+  <%= @playlist.last_refreshed_at %>
+</p>
+
+<%= link_to 'Edit', edit_playlist_path(@playlist) %> |
+<%= link_to 'Back', playlists_path %>

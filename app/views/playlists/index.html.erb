@@ -1,0 +1,51 @@
+
+<div class="content-header">
+  <h1>
+    <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
+    Listing playlists
+  </h1>
+</div>
+
+<div class="page-content inset">
+
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Url</th>
+            <th>Videos count</th>
+            <th>Download status</th>
+            <th>Last refreshed at</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @playlists.each do |playlist| %>
+          <tr>
+            <td><%= playlist.name %></td>
+            <td><%= playlist.url %></td>
+            <td><%= playlist.videos_count %></td>
+            <td><%= playlist.download_status %></td>
+            <td><%= playlist.last_refreshed_at %></td>
+            <td><%= link_to 'Show', playlist %></td>
+            <td><%= link_to 'Edit', edit_playlist_path(playlist) %></td>
+            <td><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+      <%= link_to 'New Playlist', new_playlist_path %>
+
+    </div>
+
+  </div>
+</div>
+</div>
